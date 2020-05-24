@@ -1,0 +1,9 @@
+md-card.user-preview
+  md-card-header
+    md-avatar
+      img(:src="user.avatar_url" alt="")
+    div.md-headline.user-login {{ user.login }}
+  md-card-actions
+    md-button.user-details-btn.md-dense.md-raised.md-primary
+      router-link(:to="{ name: routes.user, params: { username: user.login } }") Details
+    block buttonTmpl
